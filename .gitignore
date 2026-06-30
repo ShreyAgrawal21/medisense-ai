@@ -1,0 +1,28 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Database
+*.db
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
