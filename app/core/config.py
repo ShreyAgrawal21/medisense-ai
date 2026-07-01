@@ -16,6 +16,9 @@ class Settings(BaseSettings):
         env_file=".env",
         case_sensitive=True
     )
+    SECRET_KEY: str
+    ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
 
 
 settings = Settings()
