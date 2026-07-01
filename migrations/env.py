@@ -12,8 +12,9 @@ from app.database.base import Base  # noqa: F811
 # Import all models here
 from app.models.user import User  # noqa: F401
 
-# this is the Alembic Config object, which provides
-# access to the values within the .ini file in use.
+from app.models.report import Report  # noqa: F401
+
+# this is the Alembic Config object, which provides# access to the values within the .ini file in use.
 config = context.config
 
 # Interpret the config file for Python logging.
