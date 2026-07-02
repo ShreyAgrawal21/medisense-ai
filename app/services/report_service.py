@@ -6,6 +6,8 @@ from app.models.user import User
 from app.repositories.report_repository import ReportRepository
 from app.utils.file_handler import validate_file, save_upload_file
 
+from app.utils.pdf_reader import PDFReader
+
 
 class ReportService:
 
@@ -26,6 +28,7 @@ class ReportService:
 
         # Save file locally
         file_info = await save_upload_file(file)
+        text = PDFReader.extract_text(file_info["file_path"])  # noqa: F841
 
         # Create Report object
         report = Report(
@@ -34,6 +37,7 @@ class ReportService:
             stored_filename=file_info["stored_filename"],
             file_type=file_info["file_type"],
             file_size=file_info["file_size"],
+            extracted_text=text,
             status="uploaded",
         )
 

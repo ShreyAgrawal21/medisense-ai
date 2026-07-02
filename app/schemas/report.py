@@ -13,3 +13,5 @@ class ReportResponse(BaseModel):
     uploaded_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
+    
+    extracted_text: str | None = None

@@ -61,5 +61,5 @@ async def save_upload_file(file: UploadFile):
         "original_filename": file.filename,
         "file_size": len(content),
         "file_type": extension,
-        "path": str(file_path),
+        "file_path": str(file_path),
     }

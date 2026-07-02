@@ -10,6 +10,8 @@ from sqlalchemy import ( # pyright: ignore[reportMissingImports]
 
 from app.database.base import Base
 
+from sqlalchemy import Text # pyright: ignore[reportMissingImports]
+
 
 class Report(Base):
     __tablename__ = "reports"
@@ -52,3 +54,5 @@ class Report(Base):
         DateTime,
         default=datetime.utcnow,
     )
+    
+    extracted_text = Column(Text, nullable=True)
